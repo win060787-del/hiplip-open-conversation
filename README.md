@@ -1,6 +1,6 @@
-# HiPlip Open Conversation
+# HiPlip Open Conversation — Open-Source AI English Tutor, Speaking Practice & Vocabulary Games
 
-A small, self-hostable web app for practising spoken English with your own AI provider.
+HiPlip Open Conversation is a self-hosted English learning web app with an AI conversation tutor, A1 beginner lessons, vocabulary quizzes, and a word matching game. Practise everyday spoken English with your own OpenAI-compatible provider, or review the sample lessons and play Word Match without an API key.
 
 ![HiPlip promotional artwork](public/preview.jpg)
 
@@ -44,3 +44,31 @@ Settings include English and Simplified Chinese navigation, a separate tutor exp
 
 - **Stripe subscriptions:** Set `STRIPE_PAYMENT_LINK` to your Stripe recurring Payment Link and `STRIPE_PORTAL_LINK` to your hosted customer portal login link before starting the server. These links are optional. Stripe handles checkout and subscription management. This sample does not grant app entitlements or handle webhooks.
 - **Firebase Analytics:** Set `FIREBASE_PROJECT_ID`, `FIREBASE_MEASUREMENT_ID`, `FIREBASE_API_KEY` and `FIREBASE_APP_ID` to your Firebase web app’s public config. Enable Analytics for that app. Users can opt in from Settings. Custom events contain event names only, and no conversation text or provider credentials. Firebase Authentication is outside this integration.
+
+## A1 English lessons and vocabulary quizzes
+
+Choose a beginner lesson by the conversation you want to practise. The sample lessons teach short expressions you can use immediately, and each quiz gives you a score and explains the answers.
+
+| Lesson | Conversation goal |
+| --- | --- |
+| Greetings | Say hello and choose a greeting that fits the situation |
+| Introducing Yourself | Share your name and respond when you meet someone |
+| Ordering Food | Make a polite request in a café or restaurant |
+
+Try the vocabulary matching game after a lesson. Select a word or phrase and match it with its meaning. The game uses the vocabulary from your current lesson, so you can revisit the same English expressions in a different format.
+
+## English speaking practice with an AI conversation partner
+
+Start a free conversation by saying or typing something you might use in everyday life. For example, try introducing yourself or asking for a coffee. The AI tutor can give a short correction and ask a follow-up question so you can keep the conversation going. Use the speaker button on a tutor reply to hear it again.
+
+Select English or Simplified Chinese for navigation, and choose the tutor's explanation language separately. The target expressions stay in English. Lower the playback speed to listen more carefully, or raise it to practise following a faster reply.
+
+## Troubleshooting self-hosted English practice
+
+| What you see | What to check |
+| --- | --- |
+| AI connection test fails | Check the base URL, model ID and key. The provider must accept browser requests from your app's origin. |
+| Browser voice input is unavailable | Check microphone permission and whether your browser supports speech recognition. You can type your answer in the same conversation. |
+| You want to practise without an AI provider | Open a sample lesson, take its quiz, or play Word Match. These activities run without an API key. |
+
+For the full course catalogue and more English learning activities, visit [HiPlip English](https://hiplipenglish.io/).
