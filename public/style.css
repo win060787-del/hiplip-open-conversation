@@ -1,0 +1,30 @@
+:root{font:17px/1.5 system-ui;color:#223b32;background:#f7faf3}
+*{box-sizing:border-box}body{margin:0}main{max-width:45rem;margin:auto;padding:1rem;min-height:100dvh;display:grid;grid-template-rows:auto minmax(14rem,1fr) auto auto;gap:1rem}
+header,.actions{display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap}
+h1,h2,p{margin:0}h1{font-size:clamp(1.35rem,5vw,2rem)}
+a{color:#165a45}button,input,textarea{font:inherit;border-radius:.55rem;border:1px solid #9bb3a3;padding:.55rem .7rem}
+button{background:#e2eedc;color:#173d30;cursor:pointer;min-height:44px}button:disabled{opacity:.55}
+textarea,input{width:100%;background:white}label{display:block}.actions{justify-content:flex-end;margin-top:.35rem}
+#messages{max-height:55dvh;overflow:auto;display:flex;flex-direction:column;gap:.6rem;padding:.15rem}
+#messages p{background:#ffecd8;border-radius:1rem;padding:.75rem;max-width:90%;overflow-wrap:anywhere;align-self:start}
+#messages .user{background:#e1efda;align-self:end}
+dialog{width:min(92vw,30rem);border:1px solid #a6b7a9;border-radius:1rem;color:inherit;padding:1.1rem}
+dialog::backdrop{background:#24362b80}#api{display:grid;gap:.7rem}#status:empty,#api-status:empty{display:none}
+[hidden]{display:none!important}
+main{grid-template-rows:auto auto auto 1fr;align-content:start}
+nav{display:flex;gap:.5rem;padding:.3rem;background:#e8efe2;border-radius:1rem}
+nav a{flex:1;text-align:center;text-decoration:none;padding:.5rem;border-radius:.7rem}
+nav a[aria-current]{background:#235b46;color:white}
+.panel,.conversation-panel{background:white;border:1px solid #e1e9db;border-radius:1rem;padding:1rem}
+.panel{align-self:start;display:grid;gap:1rem}.eyebrow{font-size:.85rem;color:#426951}
+#lesson-words{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.65rem;margin-top:.65rem}
+#lesson-words article{background:#f3f7ef;border-radius:.65rem;padding:.65rem}
+#lesson-words h3{margin:0 0 .25rem}fieldset{margin:0 0 .75rem;border:1px solid #ccd9cb;border-radius:.65rem}
+fieldset label{padding:.25rem 0}fieldset input{width:auto;margin-right:.5rem}
+fieldset p,#quiz-result{color:#246149}.conversation-panel{display:grid;gap:.75rem;align-content:start}
+
+#lesson-select{width:100%;font:inherit;padding:.5rem;border:1px solid #9bb3a3;border-radius:.55rem;background:white}
+#preferences-form,#game-options{display:grid;gap:.6rem}
+#preferences-form select{display:block;width:100%;font:inherit;padding:.4rem}
+#preferences-form input[type=checkbox]{width:auto}
+nav{flex-wrap:wrap}

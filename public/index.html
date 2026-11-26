@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HiPlip Open Conversation</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body><main><header><div><h1>HiPlip Open Conversation</h1><a href="https://hiplipenglish.io/">Explore HiPlip English</a></div><button id="settings">Settings</button></header>
+<nav aria-label="Learning modules"><a href="#learn">Learn</a><a href="#practice">Practice</a><a href="#conversation-panel">Conversation</a><a href="#games">Games</a></nav>
+<div id="lesson-picker"><label for="lesson-select">Sample lesson</label><select id="lesson-select"></select></div>
+<section id="learn" class="panel" hidden><p class="eyebrow">A1 · Sample lesson</p><h2 id="lesson-title"></h2><ul id="lesson-goals"></ul><details open><summary>Preview vocabulary</summary><div id="lesson-words"></div></details><a class="button-link" href="#practice">Practise this lesson</a></section>
+<section id="practice" class="panel" hidden><p class="eyebrow">A1 · Practice</p><h2>Check your understanding</h2><form id="quiz"></form><p id="quiz-result" role="status"></p><a href="#conversation-panel">Continue to conversation</a></section>
+<section id="games" class="panel" hidden><h2>Word Match</h2><p id="game-prompt"></p><div id="game-options"></div><p id="game-status" role="status"></p><button id="game-reset" type="button">Play again</button></section>
+<div id="conversation-panel" class="conversation-panel">
+<section id="messages" aria-label="Conversation" role="log"><p class="tutor">Hi, I’m Plip. What would you like to talk about?</p></section>
+<form id="conversation"><label for="answer">Your reply</label><textarea id="answer" maxlength="500" rows="2" required></textarea><div class="actions"><button id="mic" type="button" hidden>Start recording</button><button id="send">Send</button></div></form>
+<p id="status" role="status"></p></div>
+<dialog id="preferences"><form id="preferences-form" method="dialog"><h2>Settings</h2>
+<label>Interface language<select id="interface-language"><option value="en">English</option><option value="zh">简体中文</option></select></label>
+<label>Tutor explanation language<select id="explanation-language"><option value="en">English</option><option value="zh">简体中文</option></select></label>
+<label>Speaking speed<select id="speech-rate"><option value="0.5">0.5×</option><option value="0.75">0.75×</option><option value="1">1×</option><option value="1.2">1.2×</option><option value="1.5">1.5×</option></select></label>
+<label id="analytics-setting" hidden><input id="analytics-consent" type="checkbox"> Share usage analytics</label>
+<section id="subscription" hidden><h3>Subscription</h3><p>Manage your membership on Stripe.</p><a id="subscribe-link" hidden>Subscribe</a> <a id="portal-link" hidden>Manage subscription</a></section>
+<div class="actions"><button id="open-api" type="button">API settings</button><button>Done</button></div></form></dialog>
+<dialog id="config"><form id="api"><h2>API settings</h2><p>Use an OpenAI-compatible endpoint that allows requests from this site. Your key stays in this tab until you reload.</p>
+<label>API base URL<input name="base" type="url" placeholder="https://example.com/v1" required></label>
+<label>Model name<input name="model" required></label>
+<label>API key<input name="key" type="password" autocomplete="off" required></label>
+<p id="api-status" role="status"></p>
+<div class="actions"><button id="cancel" type="button">Cancel</button><button id="test" type="button">Test connection</button><button>Save</button></div></form></dialog></main></body></html>
